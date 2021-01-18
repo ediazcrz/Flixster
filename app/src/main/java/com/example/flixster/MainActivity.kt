@@ -1,10 +1,12 @@
 package com.example.flixster
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import com.codepath.asynchttpclient.AsyncHttpClient
 import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler
+import com.example.flixster.models.Movie
+import com.google.gson.Gson
 import okhttp3.Headers
 import org.json.JSONException
 
