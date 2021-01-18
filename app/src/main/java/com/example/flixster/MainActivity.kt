@@ -12,7 +12,10 @@ import org.json.JSONException
 
 const val NOW_PLAYING_URL = "https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed"
 const val TAG = "MainActivity"
+
 class MainActivity : AppCompatActivity() {
+    var movies = listOf<Movie>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -22,9 +25,13 @@ class MainActivity : AppCompatActivity() {
             override fun onSuccess(statusCode: Int, headers: Headers, json: JsonHttpResponseHandler.JSON) {
                 Log.d(TAG, "onSuccess")
                 val jsonObject = json.jsonObject
+
                 try {
                     val results = jsonObject.getJSONArray("results")
                     Log.i(TAG, "Results: $results")
+
+                    movies = Gson().fromJson(results.toString(), Array<Movie>::class.java).toList()
+                    Log.i(TAG, "Movies: ${movies.size}")
                 } catch (e: JSONException) {
                     Log.e(TAG, "Hit json exception", e)
                 }
