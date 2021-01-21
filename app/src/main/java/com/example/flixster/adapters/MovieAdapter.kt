@@ -38,7 +38,6 @@ class MovieAdapter(private val context: Context, private val movies: List<Movie>
             binding.tvOverview.text = movie.overview
 
             val orientation = context.resources.configuration.orientation
-
             val imageUrl = if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
                 "$baseUrl/w1280/${movie.backdropPath}"
             } else {
