@@ -18,7 +18,7 @@ const val NOW_PLAYING_URL = "https://api.themoviedb.org/3/movie/now_playing?api_
 const val TAG = "MainActivity"
 
 class MainActivity : AppCompatActivity() {
-    var movies = ArrayList<Movie>()
+    val movies = arrayListOf<Movie>()
     private lateinit var mainBinding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
