@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Flixster</string>
     <string name="desc">Movie Poster</string>
+    <string name="tvOverview_text">Wonder Woman comes into conflict with the Soviet Union during the
+        Cold War in the 1980s and finds a formidable foe by the name of the Cheetah.
+    </string>
+    <string name="tvTitle_text">Wonder Woman 1984</string>
 </resources>
