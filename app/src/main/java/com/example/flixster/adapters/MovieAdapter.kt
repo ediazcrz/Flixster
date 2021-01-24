@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.Glide
+import com.example.flixster.R
 import com.example.flixster.adapters.MovieAdapter.MovieViewHolder
 import com.example.flixster.databinding.ItemMovieBinding
 import com.example.flixster.models.Movie
@@ -46,8 +47,9 @@ class MovieAdapter(private val context: Context, private val movies: List<Movie>
 
             Glide.with(binding.root)
                     .load(imageUrl)
+                    .placeholder(R.drawable.placeholder)
                     .centerInside()
-                    .into(binding.ivPoster);
+                    .into(binding.ivPoster)
         }
     }
 }
