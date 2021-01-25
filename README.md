@@ -41,7 +41,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 ### Notes
 Describe any challenges encountered while building the app.
 
-The biggest challenge thus far was attempting to simulate a bad network to view the placeholder image while the actual movie poster is retrieved. The code to show the placeholder image is there but is not triggered consistently.
+The biggest challenge thus far was attempting to simulate a slow network in the android simulator to view the placeholder image while the actual movie poster is loading. The code that renders the placeholder image can be viewed in the [MovieAdapter.kt](https://github.com/ernestodiaz95/Flixster/blob/master/app/src/main/java/com/example/flixster/adapters/MovieAdapter.kt) file. Please note that both gifs do not show this additional feature in their walkthroughs.
 
 ### Open-source libraries used
 
