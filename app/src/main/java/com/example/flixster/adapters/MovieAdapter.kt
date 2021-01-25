@@ -48,6 +48,7 @@ class MovieAdapter(private val context: Context, private val movies: List<Movie>
             Glide.with(binding.root)
                     .load(imageUrl)
                     .placeholder(R.drawable.placeholder)
+                    .error(R.drawable.imagenotfound)
                     .centerInside()
                     .into(binding.ivPoster)
         }
