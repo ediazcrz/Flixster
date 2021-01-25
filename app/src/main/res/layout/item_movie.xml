@@ -24,7 +24,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="5dp"
         android:layout_toEndOf="@+id/ivPoster"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="24sp"
         tools:text="@string/tvTitle_text" />
 
@@ -38,5 +38,6 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
         android:layout_toEndOf="@+id/ivPoster"
+        android:textColor="@color/secondary_text"
         tools:text="@string/tvOverview_text" />
 </RelativeLayout>
