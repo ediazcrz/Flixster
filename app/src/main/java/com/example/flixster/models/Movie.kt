@@ -1,7 +1,10 @@
 package com.example.flixster.models
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 import com.google.gson.annotations.SerializedName
 
+@Parcelize
 data class Movie(
     @SerializedName("backdrop_path")
     val backdropPath: String,
@@ -13,5 +16,8 @@ data class Movie(
     val title: String,
 
     @SerializedName("overview")
-    val overview: String
-)
+    val overview: String,
+
+    @SerializedName("vote_average")
+    val rating: Double
+) : Parcelable
