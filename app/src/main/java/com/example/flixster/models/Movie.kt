@@ -19,5 +19,9 @@ data class Movie(
     val overview: String,
 
     @SerializedName("vote_average")
-    val rating: Double
+    val rating: Double,
+
+    @SerializedName("id")
+    val movieId: String
+
 ) : Parcelable
