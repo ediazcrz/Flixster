@@ -16,7 +16,7 @@ import com.example.flixster.databinding.ItemMovieBinding
 import com.example.flixster.models.Movie
 
 const val TAG = "MovieAdapter"
-const val baseUrl = "http://image.tmdb.org/t/p/"
+const val baseUrl = "https://image.tmdb.org/t/p/"
 
 class MovieAdapter(private val context: Context, private val movies: List<Movie>): RecyclerView.Adapter<MovieViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder {
