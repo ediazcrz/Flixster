@@ -28,11 +28,20 @@ Flixster is an app that allows users to browse movies from the [The Movie Databa
 
 ### Notes
 
-Describe any challenges encountered while building the app.
+<em>Describe any challenges encountered while building the app.</em>
+There was a slight issue involving the YouTubePlayer where it would throw an
+error at startup. Upon downgrading the emulator's API to version 28 the player 
+proceeded to work. Also, instead of using DataBinding I opted to use ViewBinding
+since this app is not overly complicated and does not require many of the additional
+features that DataBinding provides.
 
 ## Open-source libraries used
-- [Android Async HTTP](https://github.com/codepath/CPAsyncHttpClient) - Simple asynchronous HTTP requests with JSON parsing
-- [Glide](https://github.com/bumptech/glide) - Image loading and caching library for Android
+- [Android Async HTTP](https://github.com/codepath/CPAsyncHttpClient) - Simple 
+asynchronous HTTP requests with JSON parsing
+- [Glide](https://github.com/bumptech/glide) - Image loading and caching library 
+for Androids
+- [Gson](https://github.com/google/gson) - Converts Java objects into their JSON representation.
+- [Glide Transformations](https://github.com/wasabeef/glide-transformations) - An Android transformation library providing a variety of image transformations for Glide.
 
 ---
 
