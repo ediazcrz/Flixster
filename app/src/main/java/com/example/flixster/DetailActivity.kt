@@ -13,6 +13,8 @@ import okhttp3.Headers
 import org.json.JSONException
 
 var youTubeKey: String? = null
+var autoStartVideo: Boolean = false
+
 
 class DetailActivity : YouTubeBaseActivity(), YouTubePlayer.OnInitializedListener {
 
@@ -33,6 +35,7 @@ class DetailActivity : YouTubeBaseActivity(), YouTubePlayer.OnInitializedListene
         tvOverview.text = movie?.overview
         ratingBar.rating = movie?.rating?.toFloat() ?: 0.toFloat()
 
+        autoStartVideo = movie?.rating!! > 5.0
         val videoUrl = "https://api.themoviedb.org/3/movie/${movie?.movieId}/videos?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed"
 
         val client = AsyncHttpClient()
@@ -67,7 +70,11 @@ class DetailActivity : YouTubeBaseActivity(), YouTubePlayer.OnInitializedListene
         Log.d("DetailActivity", "onInitializationSuccess")
 
         if (!wasRestored) {
-            youTubePlayer?.cueVideo(youTubeKey)
+            if (autoStartVideo) {
+                youTubePlayer?.loadVideo(youTubeKey)
+            } else {
+                youTubePlayer?.cueVideo(youTubeKey)
+            }
         }
     }
 
