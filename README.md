@@ -29,6 +29,7 @@ Flixster is an app that allows users to browse movies from the [The Movie Databa
 ### Notes
 
 <em>Describe any challenges encountered while building the app.</em>
+
 There was a slight issue involving the YouTubePlayer where it would throw an
 error at startup. Upon downgrading the emulator's API to version 28 the player 
 proceeded to work. Also, instead of using DataBinding I opted to use ViewBinding
