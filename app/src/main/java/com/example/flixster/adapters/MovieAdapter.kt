@@ -14,6 +14,7 @@ import com.example.flixster.R
 import com.example.flixster.adapters.MovieAdapter.MovieViewHolder
 import com.example.flixster.databinding.ItemMovieBinding
 import com.example.flixster.models.Movie
+import jp.wasabeef.glide.transformations.RoundedCornersTransformation
 
 const val TAG = "MovieAdapter"
 const val baseUrl = "https://image.tmdb.org/t/p/"
@@ -52,6 +53,7 @@ class MovieAdapter(private val context: Context, private val movies: List<Movie>
                     .placeholder(R.drawable.placeholder)
                     .error(R.drawable.imagenotfound)
                     .centerInside()
+                    .transform(RoundedCornersTransformation(100, 0))
                     .into(binding.ivPoster)
 
             binding.container.setOnClickListener {
